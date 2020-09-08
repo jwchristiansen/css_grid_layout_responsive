@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title CSS Grid
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = favicon_link_tag 'favicon.ico'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body.container.page-grid
+    #header
+      h1 CSS Grid Layout with Responsive Breakpoints
+
+    #content
+      .sidebar
+        ul
+          li = link_to 'Menu Item 1', '#'
+          li = link_to 'Menu Item 2', '#'
+          li = link_to 'Menu Item 3', '#'
+
+      .main
+        p = Faker::Hipster.paragraph(sentence_count: 12)
+
+    #footer footer
